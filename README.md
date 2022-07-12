@@ -63,11 +63,29 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 
 | Azure Resource | Service Tier | Monthly Cost |
 | ------------ | ------------ | ------------ |
-| *Azure Postgres Database* | Single Server, Basic Tier, Gen 5, 1vCore, 5GB storage    |     25.32        |
-| *Azure Service Bus*   |    Basic     |      0.05       |
-| *Azure Web App*       |     F1: Free    |     Free         |
-| *Azure Storage Account* |      StorageV2 Standard/Hot        |    < 0.1     |
-| *Azure Azure Function* |   Consumption Plan           |      20/mill      |
+| *Azure Database for PostgreSQL* | Single Server, Basic Tier, Gen 5, 1vCore, 5GB storage    |     25.32 USD      |
+| *Azure Service Bus*   |    Basic     |      0.05 USD      |
+| *Azure Web App*       |     F1: Free    |     0.00 USD   |
+| *Azure Storage Account* |      StorageV2 Standard/Hot        |    0.04 USD    |
+| *Azure Azure Function* |   Consumption Plan       |      0.00 USD    |
+| **Total** |             |     25.41 USD      |
+
+## Services Used
+
+### Azure Database for PostgreSQL
+Azure has a variety of managed services for databases. Azure Database for PostgreSQL is a relational database service based on the open-source Postgres database engine. It's a fully managed database-as-a-service that can handle mission-critical workloads with predictable performance, security, high availability, and dynamic scalability.
+
+### Azure Storage Accounts
+An Azure storage account can store data objects you create, such as blobs and files. This storage account provides a unique namespace in Azure for your data, and every item that you store has an address that includes your unique account name. I used the General-purpose v2 storage accounts, which provide support and the latest features for Azure Storage services such as blobs etc.
+
+### Azure Functions
+Azure Functions is a serverless, event-driven, compute-on-demand platform where we deploy cohesive functions (blocks of code) after building and debugging them locally. Azure functions are supported in both Linux and Windows environments and support many programming languages, such as C#, JavaScript, Java, and Python.
+
+### Azure Web App
+Azure App Service enables you to build and host web apps, mobile back ends, and RESTful APIs in the programming language of your choice without managing infrastructure. It offers auto-scaling and high availability, supports both Windows and Linux, and enables automated deployments from GitHub, Azure DevOps, or any Git repo. An Azure Web App is deployed within an App Service and can be deployed either as a codebase or a container.
+
+### Azure Service Bus
+Azure Service Bus is a fully managed enterprise message broker with message queues and publish-subscribe topics (in a namespace).
 
 ## Architecture Explanation
 
