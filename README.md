@@ -63,9 +63,13 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 
 | Azure Resource | Service Tier | Monthly Cost |
 | ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
+| *Azure Postgres Database* | Single Server, Basic Tier, Gen 5, 1vCore, 5GB storage    |     25.32        |
+| *Azure Service Bus*   |    Basic     |      0.05       |
+| *Azure Web App*       |     F1: Free    |     Free         |
+| *Azure Storage Account* |      StorageV2 Standard/Hot        |    < 0.1     |
+| *Azure Azure Function* |   Consumption Plan           |      20/mill      |
 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+
+This is a small application that does not require 14 GB of RAM and more than 4 vCPUS and control over underlying system and configurations. Its scales easier with the app service than using lift and shift migration which is time consuming to configure.
+Azure Function App is more convenient to use for the API because it, like App Service plan, also provides auto scaling capabilities and has built-in bindings to work with other Azure services.
